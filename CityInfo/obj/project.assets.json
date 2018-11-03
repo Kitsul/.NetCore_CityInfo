@@ -11682,5 +11682,13 @@
         "warn": true
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file J:\\Программирование\\C#\\MyProgects\\NetCore_CityInfo\\CityInfo\\obj\\CityInfo.csproj.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
