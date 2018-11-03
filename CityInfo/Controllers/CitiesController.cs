@@ -7,18 +7,24 @@ using System.Threading.Tasks;
 namespace CityInfo.Controllers
 {
     [Route("api/cities")]
-    public class CitiesController
+    public class CitiesController : Controller
     {
         [HttpGet()]
-        public JsonResult GetCities()
+        public IActionResult GetCities()
         {
-            return new JsonResult(CitiesDataStore.Current.Cities);
+            var citiesResponse = new JsonResult(CitiesDataStore.Current.Cities);
+            citiesResponse.StatusCode = 200;
+            return citiesResponse;
         }
 
         [HttpGet("{id}")]
-        public JsonResult GetCity(int id)
+        public IActionResult GetCity(int id)
         {
-            return new JsonResult(CitiesDataStore.Current.Cities.FirstOrDefault(c => c.Id == id));
+            var cityToReturn = CitiesDataStore.Current.Cities.FirstOrDefault(c => c.Id == id);
+
+            if (cityToReturn == null) return NotFound();
+
+            return Ok(cityToReturn);
         }
     }
 }
