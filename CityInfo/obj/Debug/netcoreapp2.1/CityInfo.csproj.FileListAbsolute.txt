@@ -20,7 +20,6 @@ J:\Программирование\C#\MyProgects\NetCore_CityInfo\CityInfo\obj\
 J:\Программирование\C#\MyProgects\NetCore_CityInfo\CityInfo\obj\Debug\netcoreapp2.1\CityInfo.pdb
 J:\Программирование\C#\MyProgects\NetCore_CityInfo\CityInfo\bin\Debug\netcoreapp2.1\CityInfo.dll
 J:\Программирование\C#\MyProgects\NetCore_CityInfo\CityInfo\bin\Debug\netcoreapp2.1\CityInfo.pdb
-J:\Программирование\C#\MyProgects\NetCore_CityInfo\CityInfo\obj\Debug\netcoreapp2.1\CityInfo.csprojAssemblyReference.cache
 J:\Программирование\C#\MyProgects\NetCore_CityInfo\CityInfo\obj\Debug\netcoreapp2.1\CityInfo.csproj.CoreCompileInputs.cache
 J:\Программирование\C#\MyProgects\NetCore_CityInfo\CityInfo\obj\Debug\netcoreapp2.1\CityInfo.RazorAssemblyInfo.cache
 J:\Программирование\C#\MyProgects\NetCore_CityInfo\CityInfo\obj\Debug\netcoreapp2.1\CityInfo.RazorAssemblyInfo.cs
