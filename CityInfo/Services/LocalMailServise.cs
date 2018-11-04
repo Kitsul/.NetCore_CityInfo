@@ -8,8 +8,8 @@ namespace CityInfo.Services
 {
     public class LocalMailServise : IMailServise
     {
-        private string _mailTo = "lightblok@gmail.com";
-        private string _mailFrom = "materials.kitsyl@gmail.com";
+        private string _mailTo = Startup.Configuration["mailSettings:mailToAddress"];
+        private string _mailFrom = Startup.Configuration["mailSettings:mailFromAddress"];
 
         public void Send(string subject, string message)
         {
