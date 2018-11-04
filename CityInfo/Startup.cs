@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CityInfo.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -21,17 +22,21 @@ namespace CityInfo
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-                //.AddMvcOptions(o => o.OutputFormatters.Add(
-                //    new XmlDataContractSerializerOutputFormatter()));
-                    //).AddJsonOptions(o =>
-                    //{
-                    //    if(o.SerializerSettings.ContractResolver != null)
-                    //    {
-                    //        var castedResolver = o.SerializerSettings.ContractResolver as DefaultContractResolver;
-                    //        castedResolver.NamingStrategy = null;
-                    //    }
-                    //});
-
+            //.AddMvcOptions(o => o.OutputFormatters.Add(
+            //    new XmlDataContractSerializerOutputFormatter()));
+            //).AddJsonOptions(o =>
+            //{
+            //    if(o.SerializerSettings.ContractResolver != null)
+            //    {
+            //        var castedResolver = o.SerializerSettings.ContractResolver as DefaultContractResolver;
+            //        castedResolver.NamingStrategy = null;
+            //    }
+            //});
+#if DEBUG
+            services.AddTransient<IMailServise, LocalMailServise>();
+#else
+            services.AddTransient<IMailServise, CloudMailServise>();
+#endif
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });
