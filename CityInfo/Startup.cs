@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CityInfo.Entities;
 using CityInfo.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Formatters;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -48,6 +50,11 @@ namespace CityInfo
 #else
             services.AddTransient<IMailServise, CloudMailServise>();
 #endif
+            //DESKTOP-8LV49EV\MSSQLSERVER01
+            //(localdb)\MSSQLLocalD
+            var connectionString = Startup.Configuration["connectionStrings:cityInfoDBConnectionString"];
+            services.AddDbContext<CityInfoContext>(o => o.UseSqlServer(connectionString));
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });
