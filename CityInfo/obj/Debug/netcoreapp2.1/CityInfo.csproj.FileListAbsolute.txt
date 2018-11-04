@@ -25,3 +25,5 @@ J:\Программирование\C#\MyProgects\NetCore_CityInfo\CityInfo\obj\
 J:\Программирование\C#\MyProgects\NetCore_CityInfo\CityInfo\obj\Debug\netcoreapp2.1\CityInfo.RazorAssemblyInfo.cs
 J:\Программирование\C#\MyProgects\NetCore_CityInfo\CityInfo\obj\Debug\netcoreapp2.1\CityInfo.AssemblyInfoInputs.cache
 J:\Программирование\C#\MyProgects\NetCore_CityInfo\CityInfo\obj\Debug\netcoreapp2.1\CityInfo.RazorTargetAssemblyInfo.cache
+J:\Программирование\C#\MyProgects\NetCore_CityInfo\CityInfo\obj\Debug\netcoreapp2.1\CityInfo.csprojAssemblyReference.cache
+J:\Программирование\C#\MyProgects\NetCore_CityInfo\CityInfo\bin\Debug\netcoreapp2.1\nlog.config
