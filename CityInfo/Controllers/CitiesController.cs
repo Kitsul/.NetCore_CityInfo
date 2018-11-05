@@ -9,6 +9,14 @@ namespace CityInfo.Controllers
     [Route("api/cities")]
     public class CitiesController : Controller
     {
+        /// GET api/cities
+        /// <summary>
+        /// Get all cities from API
+        /// </summary>
+        /// <returns></returns>
+        /// /// ### REMARKS ###
+        /// The following codes are returned
+        /// - 200 - Updated an existing API object
         [HttpGet()]
         public IActionResult GetCities()
         {
@@ -17,6 +25,20 @@ namespace CityInfo.Controllers
             return citiesResponse;
         }
 
+        /// <summary>
+        /// Creates a TodoItem.
+        /// </summary>
+        /// <remarks>
+        /// Sample request:
+        ///
+        ///     POST /Todo
+        ///     {
+        ///        "id": 1,
+        ///        "name": "Item1",
+        ///        "isComplete": true
+        ///     }
+        ///
+        /// </remarks>
         [HttpGet("{id}")]
         public IActionResult GetCity(int id)
         {

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using CityInfo.Entities;
 using CityInfo.Services;
@@ -55,10 +57,26 @@ namespace CityInfo
             var connectionString = Startup.Configuration["connectionStrings:cityInfoDBConnectionString"];
             services.AddDbContext<CityInfoContext>(o => o.UseSqlServer(connectionString));
 
+
+            // https://docs.microsoft.com/en-us/aspnet/core/tutorials/web-api-help-pages-using-swagger?view=aspnetcore-2.1
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });
+                c.SwaggerDoc("v1", 
+                    new Info {
+                        Title = "City Info API",
+                        Version = "v1",
+                        Contact = new Contact()
+                        {
+                            Name = "Yuriy Kitsul",
+                            Email= "lightblok@gmail.com"
+                        }
+                    });
+
+                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                c.IncludeXmlComments(xmlPath);
             });
+            services.ConfigureSwaggerGen();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -80,6 +98,9 @@ namespace CityInfo
             {
                 app.UseExceptionHandler();
             }
+
+            app.UseStatusCodePages();
+            app.UseMvc();
             app.UseSwagger();
 
             app.UseSwaggerUI(c =>
@@ -87,10 +108,7 @@ namespace CityInfo
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
                 c.RoutePrefix = string.Empty;
             });
-            app.UseStatusCodePages();
-            app.UseMvc();
 
-            
             //app.Run(async (context) =>
             //{
             //    await context.Response.WriteAsync("Hello World!");

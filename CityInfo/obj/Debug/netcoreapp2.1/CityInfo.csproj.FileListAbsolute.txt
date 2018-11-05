@@ -3,7 +3,6 @@ D:\MyOwnFolder\NetCore\CityInfo\CityInfo\bin\Debug\netcoreapp2.1\CityInfo.runtim
 D:\MyOwnFolder\NetCore\CityInfo\CityInfo\bin\Debug\netcoreapp2.1\CityInfo.runtimeconfig.dev.json
 D:\MyOwnFolder\NetCore\CityInfo\CityInfo\bin\Debug\netcoreapp2.1\CityInfo.dll
 D:\MyOwnFolder\NetCore\CityInfo\CityInfo\bin\Debug\netcoreapp2.1\CityInfo.pdb
-D:\MyOwnFolder\NetCore\CityInfo\CityInfo\obj\Debug\netcoreapp2.1\CityInfo.csprojAssemblyReference.cache
 D:\MyOwnFolder\NetCore\CityInfo\CityInfo\obj\Debug\netcoreapp2.1\CityInfo.csproj.CoreCompileInputs.cache
 D:\MyOwnFolder\NetCore\CityInfo\CityInfo\obj\Debug\netcoreapp2.1\CityInfo.RazorAssemblyInfo.cache
 D:\MyOwnFolder\NetCore\CityInfo\CityInfo\obj\Debug\netcoreapp2.1\CityInfo.RazorAssemblyInfo.cs
@@ -27,3 +26,6 @@ J:\Программирование\C#\MyProgects\NetCore_CityInfo\CityInfo\obj\
 J:\Программирование\C#\MyProgects\NetCore_CityInfo\CityInfo\obj\Debug\netcoreapp2.1\CityInfo.RazorTargetAssemblyInfo.cache
 J:\Программирование\C#\MyProgects\NetCore_CityInfo\CityInfo\obj\Debug\netcoreapp2.1\CityInfo.dll
 J:\Программирование\C#\MyProgects\NetCore_CityInfo\CityInfo\obj\Debug\netcoreapp2.1\CityInfo.pdb
+D:\MyOwnFolder\NetCore\CityInfo\CityInfo\bin\Debug\netcoreapp2.1\nlog.config
+D:\MyOwnFolder\NetCore\CityInfo\CityInfo\obj\Debug\netcoreapp2.1\CityInfo.csprojAssemblyReference.cache
+D:\MyOwnFolder\NetCore\CityInfo\CityInfo\bin\Debug\netcoreapp2.1\CityInfo.xml
